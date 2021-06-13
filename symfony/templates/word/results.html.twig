@@ -1,0 +1,37 @@
+<div class="row mb-3">
+    <div class="col-9 text-left">You submitted text:</div>
+    <div class="col-3"><button class="btn btn-lg btn-primary btn-block">Submit another text</button></div>
+</div>
+<div class="row">
+    <div class="col-12 text-left">
+        <div class="p-3 bg-light border rounded-3 mb-3 text-left">{{ text ? text|nl2br : 'Empty' }}</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-left">
+{% if results %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Word</th>
+      <th scope="col">Count</th>
+      <th scope="col">Stars</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for row in results %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ row.word }}</td>
+      <td>{{ row.count }}</td>
+      <td>{% if (3 - loop.index) >= 0 %}{% for i in range(0, 3 - loop.index) %}*{% endfor %}{% else %}-{% endif %}</td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+{% else %}
+Nothing interesting found.
+{% endif %}
+    </div>
+</div>

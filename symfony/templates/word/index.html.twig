@@ -1,0 +1,35 @@
+{% include 'base.html.twig' %}
+
+{% block body %}
+<div class="container text-center mt-3">
+    <div id="containerForm">
+        <div class="alert alert-primary mb-3 text-left" role="alert">
+            Welcome to Application.
+        </div>
+        <div id="alertText" class="alert alert-danger mb-3 text-left" role="alert" style="display: none;">
+            Something goes wrong! Please try again.
+        </div>
+        <form class="form-word-submit" action="{{ path('word_submit') }}">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-2 text-right">
+                        <label for="text">Text</label>
+                    </div>
+                    <div class="col-8">
+                        <textarea class="form-control" id="text" name="text" placeholder="Please Enter Text" cols="50" rows="10" required autofocus></textarea>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 text-center">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="containerResults"></div>
+</div>
+{% endblock %}

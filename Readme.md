@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a complete stack for running Symfony 5 into Docker containers using docker-compose tool. Contains test application. Don't forget to run database migrations after the installation.
+This is a complete stack for running Symfony 5 into Docker containers using docker-compose tool. Contains test application. Don't forget to run composer & database migrations after the installation.
 
 It is composed by 3 containers:
 
@@ -27,7 +27,7 @@ Creating symfony-docker_nginx_1 ... done
 4. Use this value for the DATABASE_URL environment variable of Symfony:
 
 ```
-DATABASE_URL=mysql://app_user:helloworld@db:3306/app_db?serverVersion=5.7
+DATABASE_URL=mysql://app_user:app_pass@db:3306/app_db?serverVersion=5.7
 ```
 
 You could change the name, user and password of the database in the `env` file at the root of the project.
