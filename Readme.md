@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a complete stack for running Symfony 5 into Docker containers using docker-compose tool. Contains test application. Don't forget to run composer & database migrations after the installation.
+This is a complete stack for running Symfony 5 into Docker containers using docker-compose tool (it's taken from `https://github.com/ger86/symfony-docker`). Contains test application. Don't forget to run composer & database migrations after the installation.
 
 It is composed by 3 containers:
 
